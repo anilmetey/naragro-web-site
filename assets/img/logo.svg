@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 130" width="100%" height="100%">
+  <defs>
+    <!-- Rich Liquid Golden Oil Gradient -->
+    <linearGradient id="oilGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="40%" stop-color="#F59E0B" />
+      <stop offset="85%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <!-- Deep Mediterranean Olive / Maritime Dark Green -->
+    <linearGradient id="deepOlive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3E30" />
+      <stop offset="100%" stop-color="#11241B" />
+    </linearGradient>
+
+    <!-- Refined Amber Droplet Gradient -->
+    <linearGradient id="amberSeed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#11241B" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- POMEGRANATE & OIL SEED ICON (Original Naragro Concept Re-imagined for Oil Trading) -->
+  <g transform="translate(20, 15)" filter="url(#softShadow)">
+    
+    <!-- Pomegranate Outer Rind / Shell -->
+    <!-- Circular body with the iconic top calyx / crown -->
+    <path d="
+      M 50 12
+      C 53 6, 56 6, 58 10
+      C 60 7, 63 7, 65 11
+      C 68 15, 68 18, 64 21
+      C 82 27, 94 43, 94 63
+      C 94 87.3, 74.3 107, 50 107
+      C 25.7 107, 6 87.3, 6 63
+      C 6 43, 18 27, 36 21
+      C 32 18, 32 15, 35 11
+      C 37 7, 40 7, 42 10
+      C 44 6, 47 6, 50 12 Z
+    " fill="url(#deepOlive)" stroke="#11241B" stroke-width="1.5" />
+
+    <!-- Inner Core Cavity (Soft Warm Ivory) -->
+    <circle cx="50" cy="64" r="39" fill="#FDFBF7" />
+
+    <!-- Innermost Golden Droplet Center / Hub -->
+    <circle cx="50" cy="64" r="7.5" fill="url(#oilGold)" />
+
+    <!-- INNER RING: 8 Golden Oil Seeds / Droplets -->
+    <!-- Radiating outward like sunflower/pomegranate seeds -->
+    <g transform="translate(50, 64)">
+      <!-- 8 radial seeds at distance 16px -->
+      <!-- Seed shape: teardrop pointing inward -->
+      <!-- 0 deg -->
+      <path d="M 0 -19 C -2.2 -19 -3 -15 0 -11 C 3 -15 2.2 -19 0 -19 Z" fill="url(#amberSeed)" />
+      <!-- 45 deg -->
+      <path d="M 0 -19 C -2.2 -19 -3 -15 0 -11 C 3 -15 2.2 -19 0 -19 Z" fill="url(#amberSeed)" transform="rotate(45)" />
+      <!-- 90 deg -->
+      <path d="M 0 -19 C -2.2 -19 -3 -15 0 -11 C 3 -15 2.2 -19 0 -19 Z" fill="url(#amberSeed)" transform="rotate(90)" />
+      <!-- 135 deg -->
+      <path d="M 0 -19 C -2.2 -19 -3 -15 0 -11 C 3 -15 2.2 -19 0 -19 Z" fill="url(#amberSeed)" transform="rotate(135)" />
+      <!-- 180 deg -->
+      <path d="M 0 -19 C -2.2 -19 -3 -15 0 -11 C 3 -15 2.2 -19 0 -19 Z" fill="url(#amberSeed)" transform="rotate(180)" />
+      <!-- 225 deg -->
+      <path d="M 0 -19 C -2.2 -19 -3 -15 0 -11 C 3 -15 2.2 -19 0 -19 Z" fill="url(#amberSeed)" transform="rotate(225)" />
+      <!-- 270 deg -->
+      <path d="M 0 -19 C -2.2 -19 -3 -15 0 -11 C 3 -15 2.2 -19 0 -19 Z" fill="url(#amberSeed)" transform="rotate(270)" />
+      <!-- 315 deg -->
+      <path d="M 0 -19 C -2.2 -19 -3 -15 0 -11 C 3 -15 2.2 -19 0 -19 Z" fill="url(#amberSeed)" transform="rotate(315)" />
+
+      <!-- OUTER RING: 16 Golden Oil Seeds / Droplets at distance 29px -->
+      <!-- 16 seeds rotated by 22.5 deg steps -->
+      <g>
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(11.25)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(33.75)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(56.25)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(78.75)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(101.25)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(123.75)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(146.25)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(168.75)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(191.25)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(213.75)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(236.25)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(258.75)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(281.25)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(303.75)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(326.25)" />
+        <path d="M 0 -33 C -2.6 -33 -3.4 -28 0 -22 C 3.4 -28 2.6 -33 0 -33 Z" fill="url(#amberSeed)" transform="rotate(348.75)" />
+      </g>
+    </g>
+  </g>
+
+  <!-- BRAND NAME "naragro" (Lower-case Rounded Luxury Aesthetic as in Original, but with Trader Elegance) -->
+  <g transform="translate(145, 25)">
+    <text x="0" y="58" font-family="'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif" font-size="54" font-weight="800" letter-spacing="-1.5" fill="url(#deepOlive)">
+      nar<tspan fill="url(#oilGold)">agro</tspan>
+    </text>
+    
+    <!-- Tagline: Commodities & Physical Brokerage -->
+    <text x="2" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="4" fill="#4B6354">
+      COMMODITIES &amp; BROKERAGE
+    </text>
+
+    <!-- Subtitle: Mediterranean & Global Agri Trade -->
+    <text x="2" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#8FA899">
+      VEGETABLE OILS • OILSEEDS • SHIP CHARTERING
+    </text>
+  </g>
+</svg>

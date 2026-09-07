@@ -1,0 +1,1207 @@
+/* ==========================================================================
+   NARAGRO - International Agricultural Commodities & Maritime Brokerage
+   Ultra-Premium Corporate Stylesheet (Clean, Authoritative, High-Contrast)
+   ========================================================================== */
+
+/* 1. Base Variables & Typography */
+:root {
+  --trader-navy: #0b192c;
+  --trader-navy-dark: #07101c;
+  --trader-navy-light: #132742;
+  --trader-gold: #c88910;
+  --trader-gold-bright: #feb900;
+  --trader-gold-light: #fff8eb;
+  --trader-text-main: #1e293b;
+  --trader-text-muted: #475569;
+  --trader-border: #e2e8f0;
+  --trader-bg-alt: #f8fafc;
+  --trader-bg-warm: #fcfbf7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--trader-text-main);
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Plus Jakarta Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  color: var(--trader-navy);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--trader-text-muted);
+}
+
+a {
+  text-decoration: none;
+  color: var(--trader-gold);
+  transition: all 0.25s ease-in-out;
+}
+
+a:hover {
+  color: #a36c05;
+}
+
+::selection {
+  background: rgba(254, 185, 0, 0.35);
+  color: var(--trader-navy);
+}
+
+section {
+  padding: 95px 0;
+  position: relative;
+}
+
+/* 2. Scroll Progress Bar (Top) */
+#scrollProgressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #c88910, #feb900);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+/* 3. Main Navigation Header (Luxury Executive Corporate) */
+#mainHeader {
+  background-color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1020;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 2px 16px rgba(11, 25, 44, 0.04);
+}
+
+.header-inner-wrap {
+  min-height: 72px;
+  height: 72px;
+  transition: all 0.3s ease;
+}
+
+#mainHeader.scrolled {
+  box-shadow: 0 4px 22px rgba(11, 25, 44, 0.08);
+}
+
+#mainHeader.scrolled .header-inner-wrap {
+  min-height: 64px;
+  height: 64px;
+}
+
+.header-logo-img {
+  height: 42px;
+  width: auto;
+  transition: transform 0.25s ease;
+}
+
+#mainHeader .navbar-brand:hover .header-logo-img {
+  transform: scale(1.02);
+}
+
+.nav-link-custom {
+  font-size: 13.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #334155;
+  padding: 8px 16px;
+  position: relative;
+  transition: color 0.25s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 16px;
+  right: 16px;
+  height: 2.5px;
+  background-color: var(--trader-gold-bright);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link-custom:hover {
+  color: var(--trader-gold);
+}
+
+.nav-link-custom.active {
+  color: var(--trader-navy);
+  font-weight: 700;
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+  transform: scaleX(1);
+}
+
+/* Executive Segmented Language Switcher (Capsule Design) */
+.header-lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 30px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.header-lang-switcher .lang-btn {
+  border: none !important;
+  background: transparent !important;
+  color: #64748b !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.6px;
+  padding: 5px 12px !important;
+  border-radius: 20px !important;
+  line-height: 1 !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer;
+}
+
+.header-lang-switcher .lang-btn:hover {
+  color: var(--trader-navy) !important;
+}
+
+.header-lang-switcher .lang-btn.active {
+  background: var(--trader-navy) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(11, 25, 44, 0.18) !important;
+}
+
+/* Action Buttons */
+.btn-gold-action {
+  background: linear-gradient(135deg, #feb900 0%, #d4920a 100%);
+  color: var(--trader-navy-dark) !important;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 13px 30px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 4px 14px rgba(212, 146, 10, 0.3);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-gold-action:hover {
+  background: linear-gradient(135deg, #ffc424 0%, #e09d12 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 146, 10, 0.45);
+  color: #000000 !important;
+}
+
+.btn-outline-action {
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 12px 28px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-outline-action:hover {
+  background: #ffffff;
+  color: var(--trader-navy) !important;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 4. Hero Carousel (Locked Dimensions - Zero Shift, Zero Jitter, Zero Gap) */
+.hero-carousel-section {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none;
+}
+
+.hero-carousel-section,
+#heroCarousel,
+#heroCarousel .carousel-inner {
+  height: 82vh;
+  min-height: 600px;
+  max-height: 750px;
+  position: relative;
+  overflow: hidden;
+}
+
+#heroCarousel.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
+  transform: none !important;
+}
+
+#heroCarousel.carousel-fade .carousel-item.active,
+#heroCarousel.carousel-fade .carousel-item-next.carousel-item-start,
+#heroCarousel.carousel-fade .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  z-index: 2;
+}
+
+#heroCarousel.carousel-fade .active.carousel-item-start,
+#heroCarousel.carousel-fade .active.carousel-item-end {
+  opacity: 0;
+  z-index: 1;
+}
+
+.hero-slide-item {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-cinema-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg, 
+    rgba(7, 16, 28, 0.72) 0%, 
+    rgba(7, 16, 28, 0.82) 40%, 
+    rgba(7, 16, 28, 0.94) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content-box {
+  position: relative;
+  z-index: 2;
+  padding: 90px 15px;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(254, 185, 0, 0.16);
+  border: 1px solid rgba(254, 185, 0, 0.45);
+  color: #fed053;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  margin-bottom: 20px;
+}
+
+.hero-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-main-title .gold-accent {
+  color: var(--trader-gold-bright);
+}
+
+.hero-lead-text {
+  font-size: 1.22rem;
+  color: #f8fafc;
+  line-height: 1.8;
+  font-weight: 400;
+  max-width: 780px;
+  margin: 0 auto 36px auto;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 54px;
+  height: 54px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.85;
+  transition: all 0.25s ease;
+  z-index: 5;
+}
+
+.carousel-control-prev { left: 24px; }
+.carousel-control-next { right: 24px; }
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: var(--trader-gold-bright);
+  color: var(--trader-navy-dark);
+  opacity: 1;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 38px;
+  height: 4px;
+  border-radius: 2px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: var(--trader-gold-bright);
+  width: 54px;
+}
+
+/* 5. Section Titles & Badges */
+.section-badge-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-badge-wrap .accent-bar {
+  width: 36px;
+  height: 3px;
+  background: var(--trader-gold-bright);
+  border-radius: 2px;
+}
+
+.section-badge-text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--trader-gold);
+}
+
+.section-heading-lg {
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: var(--trader-navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.section-subtext {
+  font-size: 1.05rem;
+  color: var(--trader-text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* 6. About Us Section (Enlarged Presence & Luxury Finish) */
+.about-section-wrap {
+  background: linear-gradient(180deg, #fdfbf7 0%, #f4f7fa 100%);
+  border-bottom: 1px solid var(--trader-border);
+}
+
+.about-quote-card {
+  background-color: #ffffff;
+  border-left: 4.5px solid var(--trader-gold-bright);
+  border-radius: 0 12px 12px 0;
+  padding: 26px 30px;
+  box-shadow: 0 6px 20px rgba(11, 25, 44, 0.05);
+  border-top: 1px solid var(--trader-border);
+  border-right: 1px solid var(--trader-border);
+  border-bottom: 1px solid var(--trader-border);
+}
+
+.about-quote-card p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--trader-navy);
+  line-height: 1.85;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/* 6. About Us Section & Static Executive Frame */
+.about-section-wrap {
+  position: relative;
+}
+
+.about-card-frame {
+  position: relative;
+}
+
+.about-main-img-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(11, 25, 44, 0.16);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  background: var(--trader-navy-dark);
+  position: relative;
+}
+
+.about-main-img-wrap img.about-port-img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Permanent Compliance Strip Positioned Cleanly BELOW the Image */
+.about-caption-strip {
+  background: linear-gradient(135deg, #0e1e33 0%, #081322 100%);
+  border: 1px solid rgba(254, 185, 0, 0.32);
+  border-left: 4px solid var(--trader-gold-bright);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 10px 30px rgba(11, 25, 44, 0.15);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card-frame:hover .about-caption-strip {
+  border-color: var(--trader-gold-bright);
+  box-shadow: 0 12px 35px rgba(11, 25, 44, 0.25), 0 0 20px rgba(254, 185, 0, 0.15);
+}
+
+.caption-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(254, 185, 0, 0.15);
+  border: 1px solid rgba(254, 185, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Executive Trading Discipline & Pillars Matrix */
+.executive-pillars-list {
+  margin-top: 24px;
+}
+
+.executive-pillar-card {
+  background: #ffffff;
+  border: 1px solid var(--trader-border);
+  border-left: 4px solid #cbd5e1;
+  border-radius: 12px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(11, 25, 44, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.executive-pillar-card:hover {
+  border-left-color: var(--trader-gold-bright);
+  transform: translateX(-6px);
+  box-shadow: 0 8px 24px rgba(11, 25, 44, 0.08);
+  border-color: #fde68a;
+}
+
+.pillar-title,
+.pillar-text,
+.pillar-category-tag {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.executive-pillar-card:hover .pillar-title {
+  transform: translateX(-6px);
+  color: var(--trader-gold);
+}
+
+.executive-pillar-card:hover .pillar-text {
+  transform: translateX(-4px);
+  color: #0f172a;
+}
+
+.executive-pillar-card:hover .pillar-category-tag {
+  background: var(--trader-gold-bright);
+  color: var(--trader-navy-dark);
+  transform: translateX(-6px);
+}
+
+.pillar-num-tag {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--trader-navy);
+  transition: all 0.25s ease;
+}
+
+.executive-pillar-card:hover .pillar-num-tag {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #b45309;
+}
+
+.pillar-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--trader-navy);
+}
+
+.pillar-category-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.pillar-text {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.65;
+}
+
+/* 7. What We Do Section (Solid Architectural Commodities Desk Cards) */
+.what-we-do-section {
+  background-color: var(--trader-navy);
+  color: #ffffff;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trader-desk-card {
+  position: relative;
+  overflow: hidden;
+  background: #081525;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 3.5px solid var(--trader-gold-bright);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  height: 100%;
+}
+
+.trader-desk-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(254, 185, 0, 0.55);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(254, 185, 0, 0.12);
+}
+
+.trader-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.82;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* Card 1: Physical Brokerage - Oilseeds / Grain Harvest photo with rich navy tint */
+.card-bg-brokerage .trader-card-bg {
+  background-image: 
+    linear-gradient(170deg, rgba(8, 20, 36, 0.85) 0%, rgba(5, 14, 26, 0.91) 60%, rgba(3, 9, 18, 0.97) 100%),
+    url('../img/oilseeds-grain.jpg');
+}
+
+/* Card 2: Supply Chain & Maritime Logistics - Chemical/Oil Tanker photo with rich navy tint */
+.card-bg-logistics .trader-card-bg {
+  background-image: 
+    linear-gradient(170deg, rgba(8, 20, 36, 0.85) 0%, rgba(5, 14, 26, 0.91) 60%, rgba(3, 9, 18, 0.97) 100%),
+    url('../img/hero-tanker.jpg');
+}
+
+/* Card 3: Contract Governance & Compliance - Oil Testing Laboratory photo with rich navy tint */
+.card-bg-compliance .trader-card-bg {
+  background-image: 
+    linear-gradient(170deg, rgba(8, 20, 36, 0.85) 0%, rgba(5, 14, 26, 0.91) 60%, rgba(3, 9, 18, 0.97) 100%),
+    url('../img/vegoils-lab.jpg');
+}
+
+.trader-desk-card:hover .trader-card-bg {
+  transform: scale(1.08);
+  opacity: 0.96;
+}
+
+.trader-card-inner {
+  position: relative;
+  z-index: 2;
+  padding: 38px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-icon-circle {
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+  background: rgba(254, 185, 0, 0.12);
+  border: 1px solid rgba(254, 185, 0, 0.28);
+  color: var(--trader-gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.trader-desk-card:hover .desk-icon-circle {
+  background: var(--trader-gold-bright);
+  color: var(--trader-navy-dark);
+  border-color: var(--trader-gold-bright);
+  transform: scale(1.06);
+}
+
+.trader-desk-card h4 {
+  color: #ffffff;
+  font-size: 1.32rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.trader-desk-card p {
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.desk-spec-pill {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 4px 11px;
+  border-radius: 9999px;
+  background: #172e4c;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 8. Products & Services Section (Unified Architectural Catalog Grid) */
+.commodity-tabs-nav {
+  border: 1px solid var(--trader-border);
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 12px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 8px rgba(11, 25, 44, 0.03);
+}
+
+.commodity-tabs-nav .nav-link {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--trader-text-muted);
+  border-radius: 8px;
+  border: none;
+  padding: 11px 24px;
+  transition: all 0.25s ease;
+}
+
+.commodity-tabs-nav .nav-link:hover {
+  color: var(--trader-navy);
+}
+
+.commodity-tabs-nav .nav-link.active {
+  background-color: var(--trader-navy);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(11, 25, 44, 0.15);
+}
+
+/* Single Unified Commodity Card Architecture */
+.commodity-card {
+  background: #ffffff;
+  border: 1px solid var(--trader-border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(11, 25, 44, 0.04);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.commodity-card:hover {
+  transform: translateY(-6px);
+  border-color: #fde68a;
+  box-shadow: 0 16px 36px rgba(11, 25, 44, 0.09);
+}
+
+.commodity-card-img-wrap {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  background: var(--trader-navy-dark);
+  overflow: hidden;
+}
+
+.commodity-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.commodity-card:hover .commodity-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.commodity-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--trader-navy);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.commodity-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.commodity-card-title {
+  font-size: 1.32rem;
+  font-weight: 800;
+  color: var(--trader-navy);
+  margin-bottom: 10px;
+}
+
+.commodity-card-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.commodity-spec-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.commodity-spec-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.commodity-action-btn {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--trader-navy);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.commodity-action-btn:hover {
+  background: var(--trader-gold-bright);
+  border-color: var(--trader-gold-bright);
+  color: var(--trader-navy-dark);
+  padding-left: 20px;
+}
+
+
+
+
+/* 11. Corporate Footer (Institutional Prestige) */
+footer.corporate-footer {
+  background: var(--trader-navy-dark);
+  color: #94a3b8;
+  font-size: 14.5px;
+  border-top: 3px solid var(--trader-gold-bright);
+}
+
+footer.corporate-footer h5 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer.corporate-footer h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background-color: var(--trader-gold-bright);
+}
+
+footer.corporate-footer a {
+  color: #cbd5e1;
+  transition: color 0.2s ease;
+}
+
+footer.corporate-footer a:hover {
+  color: var(--trader-gold-bright);
+}
+
+.footer-nav-list li {
+  margin-bottom: 12px;
+}
+
+.footer-nav-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav-list a:hover {
+  transform: translateX(4px);
+}
+
+/* Executive Commercial Desk in Footer */
+.footer-commercial-desk {
+  background: linear-gradient(145deg, rgba(14, 30, 52, 0.75) 0%, rgba(8, 18, 33, 0.9) 100%);
+  border: 1px solid rgba(254, 185, 0, 0.28);
+  border-left: 4px solid var(--trader-gold-bright);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-commercial-desk:hover {
+  transform: translateY(-4px);
+  border-color: rgba(254, 185, 0, 0.55);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45), 0 0 25px rgba(254, 185, 0, 0.12);
+}
+
+.desk-badge-kicker {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  color: var(--trader-gold-bright);
+}
+
+.desk-live-pill {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 3px 8px;
+  border-radius: 9999px;
+  font-size: 10.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dot-beacon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.desk-entity-name {
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+.desk-sub-title {
+  font-size: 12px;
+}
+
+.footer-email-channel {
+  background: #040c16;
+  border: 1px solid rgba(254, 185, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+.footer-email-channel:hover {
+  background: rgba(254, 185, 0, 0.15);
+  border-color: var(--trader-gold-bright);
+}
+
+.footer-email-channel:hover .channel-arrow {
+  transform: translate(3px, -3px);
+  color: #ffffff !important;
+}
+
+.channel-arrow {
+  font-size: 14px;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Trading & Legal Standards Compliance Pills (Interactive Hover & Micro-Animations) */
+.footer-compliance-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3.5px solid var(--trader-gold-bright);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-compliance-pill:hover {
+  background: linear-gradient(90deg, rgba(254, 185, 0, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: rgba(254, 185, 0, 0.45);
+  transform: translateX(6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(254, 185, 0, 0.1);
+}
+
+.compliance-icon-wrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(254, 185, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.footer-compliance-pill:hover .compliance-icon-wrap {
+  transform: scale(1.15) rotate(6deg);
+  background: var(--trader-gold-bright);
+}
+
+.footer-compliance-pill:hover .compliance-icon-wrap i {
+  color: var(--trader-navy-dark) !important;
+}
+
+.footer-compliance-pill span {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: color 0.25s ease;
+}
+
+.footer-compliance-pill:hover span {
+  color: #ffffff;
+}
+
+/* Headquarters Card */
+.footer-hq-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  padding: 20px 22px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-hq-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(254, 185, 0, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 0;
+  font-size: 13.5px;
+  color: #64748b;
+}
+
+/* 12. Floating Back to Top */
+#backToTopBtn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--trader-gold-bright);
+  color: var(--trader-navy-dark);
+  border: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#backToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#backToTopBtn:hover {
+  background: #ffa800;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(212, 146, 10, 0.4);
+}
+
+/* 13. Responsive Adaptations */
+@media (max-width: 991px) {
+  .hero-main-title {
+    font-size: 2.5rem;
+  }
+  .about-main-img-wrap img {
+    height: 460px;
+  }
+  section {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-carousel-section,
+  #heroCarousel,
+  #heroCarousel .carousel-inner {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+  .hero-main-title {
+    font-size: 2rem;
+  }
+  .hero-lead-text {
+    font-size: 1.05rem;
+  }
+  .section-heading-lg {
+    font-size: 1.85rem;
+  }
+  .commodity-tabs-nav {
+    width: 100%;
+  }
+  .commodity-tabs-nav .nav-link {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+  .carousel-control-prev { left: 8px; }
+  .carousel-control-next { right: 8px; }
+}
+
+@media (max-width: 576px) {
+  .hero-carousel-section,
+  #heroCarousel,
+  #heroCarousel .carousel-inner {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+  .hero-main-title {
+    font-size: 1.7rem;
+  }
+  .about-main-img-wrap img {
+    height: 380px;
+  }
+  .commodity-card-img-wrap {
+    height: 180px;
+  }
+  .commodity-card-body {
+    padding: 18px;
+  }
+  .commodity-card-title {
+    font-size: 1.2rem;
+  }
+  .executive-pillar-card {
+    padding: 12px;
+  }
+  .pillar-num-tag {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+  .pillar-title {
+    font-size: 14.5px;
+  }
+  .pillar-text {
+    font-size: 12.5px;
+}
+
+
