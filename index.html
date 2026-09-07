@@ -26,85 +26,28 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#desktopNav" class="splash-active">
+<body data-bs-spy="scroll" data-bs-target="#desktopNav" class="curtain-locked">
 
   <!-- =========================================================================
-       ULTRA-PRO EXECUTIVE SPLASH SCREEN & COMMODITIES TRADE DESK INITIALIZER
+       MINIMALIST EXECUTIVE BRAND CURTAIN (QUIET LUXURY)
        ========================================================================= -->
-  <aside id="splashScreen" class="splash-screen" role="dialog" aria-modal="true" aria-label="Naragro Trade Portal Initializing">
-    <!-- Ambient Animated Backdrop with Maritime Coordinate Grid & Golden Flare -->
-    <div class="splash-backdrop-grid"></div>
-    <div class="splash-radial-aura"></div>
-    <div class="splash-radar-circle splash-radar-1"></div>
-    <div class="splash-radar-circle splash-radar-2"></div>
-    <div class="splash-compass-cross"></div>
+  <div id="splashScreen" class="curtain-loader" aria-hidden="true">
+    <div class="curtain-panel">
+      <div class="curtain-content">
+        <!-- Authentic White Brand Mark with Subtle Gold Light Shimmer -->
+        <div class="curtain-logo-wrap">
+          <img src="assets/img/naragro-logo-white.png" alt="Naragro" class="curtain-logo">
+          <div class="curtain-shimmer"></div>
+        </div>
 
-    <!-- Top Status Telemetry Bar -->
-    <header class="splash-topbar">
-      <div class="splash-status-pill">
-        <span class="splash-pulse-dot"></span>
-        <span class="splash-status-telemetry">LIVE DESK &bull; 36&deg;48'N 34&deg;38'E &bull; MERSIN MIP</span>
+        <!-- Fine Hairline Divider -->
+        <div class="curtain-divider"></div>
+
+        <!-- Elegant Editorial Subtitle -->
+        <p class="curtain-tagline" data-i18n="curtain_tagline">AGRICULTURAL COMMODITIES &amp; MARITIME</p>
       </div>
-      <button type="button" id="splashSkipBtn" class="splash-skip-trigger" aria-label="Skip to main website">
-        <span data-i18n="splash_skip_btn">Skip Intro</span>
-        <kbd>ESC</kbd>
-        <i class="bi bi-arrow-right-short"></i>
-      </button>
-    </header>
-
-    <!-- Center Executive Content Deck -->
-    <main class="splash-center-wrap">
-      <!-- Animated Brand Orb & White Logo -->
-      <div class="splash-emblem-container">
-        <div class="splash-orbit-ring"></div>
-        <div class="splash-orbit-pulse"></div>
-        <div class="splash-emblem-core">
-          <img src="assets/img/naragro-logo-white.png" alt="Naragro" class="splash-logo-img">
-        </div>
-      </div>
-
-      <!-- Typography -->
-      <div class="splash-brand-text">
-        <h1 class="splash-brand-name">NARAGRO</h1>
-        <div class="splash-subtitle-badge">
-          <i class="bi bi-shield-check text-warning"></i>
-          <span data-i18n="splash_subtitle">PHYSICAL AGRI-COMMODITIES &amp; MARITIME BROKERAGE</span>
-        </div>
-        <div class="splash-node-line">
-          <span class="splash-node-bracket">[</span>
-          <span data-i18n="splash_node">MEDITERRANEAN LOGISTICS GATEWAY &bull; MERSIN (MIP)</span>
-          <span class="splash-node-bracket">]</span>
-        </div>
-      </div>
-
-      <!-- High-Tech Progress & Live Telemetry Sequence -->
-      <div class="splash-telemetry-deck">
-        <div class="splash-progress-track">
-          <div id="splashProgressBar" class="splash-progress-fill">
-            <span class="splash-progress-glow"></span>
-          </div>
-        </div>
-
-        <div class="splash-status-row">
-          <div class="splash-step-label">
-            <i class="bi bi-cpu-fill text-warning me-1"></i>
-            <span id="splashStatusText" data-i18n="splash_status_1">INITIALIZING GLOBAL MARITIME NETWORK...</span>
-          </div>
-          <div class="splash-counter-box">
-            <span id="splashCounterVal">00</span><span class="splash-counter-pct">%</span>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Bottom Interactive Hint -->
-    <footer class="splash-footer-hint" id="splashEnterHint">
-      <span class="splash-click-badge">
-        <i class="bi bi-cursor-fill me-1"></i>
-        <span data-i18n="splash_skip">Click anywhere to enter portal</span>
-      </span>
-    </footer>
-  </aside>
+    </div>
+  </div>
 
   <!-- Reading Progress Bar -->
   <div id="scrollProgressBar"></div>
