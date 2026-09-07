@@ -303,44 +303,63 @@ function setupVegoilsSlider() {
 }
 
 /**
- * Minimalist Executive Brand Curtain (Quiet Luxury)
+ * Executive Maritime & Commodities Brand Curtain (Sector Relevant)
  */
 function setupSplashScreen() {
-  const curtain = document.getElementById('splashScreen');
-  if (!curtain) return;
+  const splash = document.getElementById('splashScreen');
+  if (!splash) return;
 
+  const progressFill = document.getElementById('industryProgressFill');
   let isDismissed = false;
 
-  function dismissCurtain() {
+  function dismissSplash() {
     if (isDismissed) return;
     isDismissed = true;
 
-    curtain.classList.add('curtain-lift');
+    if (progressTimer) clearInterval(progressTimer);
+    if (progressFill) progressFill.style.width = '100%';
+
+    splash.classList.add('industry-splash-exit');
     document.body.classList.remove('curtain-locked');
 
     setTimeout(() => {
-      curtain.style.display = 'none';
+      splash.style.display = 'none';
       if (window.AOS) window.AOS.refresh();
     }, 850);
   }
 
-  // Smooth editorial reveal after 1.25s
-  const timer = setTimeout(dismissCurtain, 1250);
+  // Smooth line progress over ~1.8 seconds
+  const duration = 1800;
+  const interval = 25;
+  const totalTicks = duration / interval;
+  let tick = 0;
+
+  const progressTimer = setInterval(() => {
+    tick++;
+    const t = tick / totalTicks;
+    const pct = Math.min(100, Math.round((1 - Math.pow(1 - t, 2.4)) * 100));
+
+    if (progressFill) {
+      progressFill.style.width = pct + '%';
+    }
+
+    if (pct >= 100) {
+      clearInterval(progressTimer);
+      setTimeout(dismissSplash, 180);
+    }
+  }, interval);
 
   // Click anywhere immediately lifts curtain
-  curtain.addEventListener('click', () => {
-    clearTimeout(timer);
-    dismissCurtain();
-  });
+  splash.addEventListener('click', dismissSplash);
 
   // Keyboard shortcut (Escape, Space, Enter)
   window.addEventListener('keydown', (e) => {
     if (!isDismissed && (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter')) {
-      clearTimeout(timer);
-      dismissCurtain();
+      dismissSplash();
     }
   });
 }
+
 
 
 

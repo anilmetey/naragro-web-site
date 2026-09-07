@@ -17,8 +17,16 @@ const translations = {
     topbar_text: "Agricultural Commodities Brokerage & Maritime Logistics | Mersin Gateway",
     topbar_email: "yca@naragro.com.tr",
 
-    // Executive Brand Curtain
-    curtain_tagline: "AGRICULTURAL COMMODITIES & MARITIME",
+    // Executive Industry Splash
+    splash_tagline: "PHYSICAL AGRI-COMMODITIES &amp; MARITIME BROKERAGE",
+    splash_pillar_1_title: "VEGETABLE OILS &amp; FATS",
+    splash_pillar_1_sub: "Palm &bull; Sunflower &bull; Rapeseed &bull; Soy &bull; Olive",
+    splash_pillar_2_title: "OILSEEDS &amp; GRAINS",
+    splash_pillar_2_sub: "Sunflower Seeds &bull; Soybeans &bull; GAFTA Standards",
+    splash_pillar_3_title: "MARITIME LOGISTICS",
+    splash_pillar_3_sub: "Parcel Tankers &bull; Heated Shore Tanks &bull; Mersin Hub",
+    splash_footer_node: "MERSIN MARITIME GATEWAY &bull; GLOBAL COMMODITY CORRIDORS",
+    splash_enter_hint: "Click anywhere to explore",
 
     // Hero Section
     hero_badge: "PHYSICAL AGRI-COMMODITIES & CHARTERING",
@@ -171,8 +179,16 @@ const translations = {
     topbar_text: "Tarımsal Emtia Brokerajı & Denizcilik Lojistiği | Mersin Merkezli",
     topbar_email: "yca@naragro.com.tr",
 
-    // Executive Brand Curtain
-    curtain_tagline: "TARIMSAL EMTİA & DENİZCİLİK",
+    // Executive Industry Splash
+    splash_tagline: "FİZİKİ TARIMSAL EMTİA &amp; DENİZCİLİK BROKERLIĞI",
+    splash_pillar_1_title: "BİTKİSEL YAĞLAR &amp; GRES",
+    splash_pillar_1_sub: "Palm &bull; Ayçiçek &bull; Kolza &bull; Soya &bull; Zeytin",
+    splash_pillar_2_title: "YAĞLI TOHUMLAR",
+    splash_pillar_2_sub: "Ayçiçeği Tohumu &bull; Soya Fasulyesi &bull; GAFTA Standartları",
+    splash_pillar_3_title: "DENİZCİLİK LOJİSTİĞİ",
+    splash_pillar_3_sub: "Kimyasal Tankerler &bull; Isıtmalı Sahil Tankları &bull; Mersin Limanı",
+    splash_footer_node: "AKDENİZ TİCARET &amp; LOJİSTİK KAPISI &bull; MERSİN LİMANI",
+    splash_enter_hint: "Siteye devam etmek için tıklayın",
 
     // Hero Bölümü
     hero_badge: "FİZİKİ TARIMSAL EMTİA & GEMİ KİRALAMA",

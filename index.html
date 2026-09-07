@@ -29,25 +29,80 @@
 <body data-bs-spy="scroll" data-bs-target="#desktopNav" class="curtain-locked">
 
   <!-- =========================================================================
-       MINIMALIST EXECUTIVE BRAND CURTAIN (QUIET LUXURY)
+       EXECUTIVE MARITIME & COMMODITIES BRAND CURTAIN (SECTOR RELEVANT)
        ========================================================================= -->
-  <div id="splashScreen" class="curtain-loader" aria-hidden="true">
-    <div class="curtain-panel">
-      <div class="curtain-content">
-        <!-- Authentic White Brand Mark with Subtle Gold Light Shimmer -->
-        <div class="curtain-logo-wrap">
-          <img src="assets/img/naragro-logo-white.png" alt="Naragro" class="curtain-logo">
-          <div class="curtain-shimmer"></div>
+  <aside id="splashScreen" class="industry-splash" aria-label="Naragro Trade Portal Initializing">
+    <!-- Cinematic Background: High-Seas Bulk Parcel Tanker -->
+    <div class="industry-splash-bg" style="background-image: url('assets/img/hero-tanker.jpg');"></div>
+    <div class="industry-splash-overlay"></div>
+
+    <div class="industry-splash-container">
+      <!-- Top Operational Gateway Tag -->
+      <div class="industry-splash-top">
+        <span class="industry-node-pill">
+          <i class="bi bi-geo-alt-fill text-warning me-1"></i>
+          <span data-i18n="splash_footer_node">MERSIN MARITIME GATEWAY &bull; GLOBAL COMMODITY CORRIDORS</span>
+        </span>
+      </div>
+
+      <!-- Center Brand & Physical Commodity Pillars -->
+      <div class="industry-splash-main">
+        <div class="industry-logo-wrapper">
+          <img src="assets/img/naragro-logo-white.png" alt="Naragro" class="industry-logo-img">
+          <div class="industry-logo-shimmer"></div>
         </div>
 
-        <!-- Fine Hairline Divider -->
-        <div class="curtain-divider"></div>
+        <p class="industry-tagline" data-i18n="splash_tagline">PHYSICAL AGRI-COMMODITIES &amp; MARITIME BROKERAGE</p>
 
-        <!-- Elegant Editorial Subtitle -->
-        <p class="curtain-tagline" data-i18n="curtain_tagline">AGRICULTURAL COMMODITIES &amp; MARITIME</p>
+        <!-- 3 Core Physical Sector Divisions -->
+        <div class="industry-pillars-row">
+          <!-- Pillar 1: Vegoils -->
+          <div class="industry-pillar-card">
+            <div class="pillar-icon-box">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+            <div class="pillar-info">
+              <h4 class="pillar-name" data-i18n="splash_pillar_1_title">VEGETABLE OILS &amp; FATS</h4>
+              <p class="pillar-sub" data-i18n="splash_pillar_1_sub">Palm &bull; Sunflower &bull; Rapeseed &bull; Soy &bull; Olive</p>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Oilseeds -->
+          <div class="industry-pillar-card">
+            <div class="pillar-icon-box">
+              <i class="bi bi-flower1"></i>
+            </div>
+            <div class="pillar-info">
+              <h4 class="pillar-name" data-i18n="splash_pillar_2_title">OILSEEDS &amp; GRAINS</h4>
+              <p class="pillar-sub" data-i18n="splash_pillar_2_sub">Sunflower Seeds &bull; Soybeans &bull; GAFTA Standards</p>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Maritime Logistics -->
+          <div class="industry-pillar-card">
+            <div class="pillar-icon-box">
+              <i class="bi bi-compass"></i>
+            </div>
+            <div class="pillar-info">
+              <h4 class="pillar-name" data-i18n="splash_pillar_3_title">MARITIME LOGISTICS</h4>
+              <p class="pillar-sub" data-i18n="splash_pillar_3_sub">Parcel Tankers &bull; Heated Shore Tanks &bull; Mersin Hub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Minimalist Line Loader & Prompt -->
+      <div class="industry-splash-bottom">
+        <div class="industry-progress-line">
+          <div id="industryProgressFill" class="industry-progress-fill"></div>
+        </div>
+        <div class="industry-enter-prompt">
+          <span data-i18n="splash_enter_hint">Click anywhere to explore</span>
+          <i class="bi bi-arrow-right-short ms-1 text-warning"></i>
+        </div>
       </div>
     </div>
-  </div>
+  </aside>
 
   <!-- Reading Progress Bar -->
   <div id="scrollProgressBar"></div>

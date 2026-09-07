@@ -1206,69 +1206,123 @@ footer.corporate-footer a:hover {
 }
 
 /* ==========================================================================
-   MINIMALIST EXECUTIVE BRAND CURTAIN (QUIET LUXURY)
+   EXECUTIVE MARITIME & COMMODITIES BRAND CURTAIN (SECTOR RELEVANT)
    ========================================================================== */
 body.curtain-locked {
   overflow: hidden !important;
+  height: 100vh !important;
 }
 
-.curtain-loader {
+.industry-splash {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   z-index: 999999;
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.curtain-panel {
-  width: 100%;
-  height: 100%;
-  background-color: #08101d;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.85s cubic-bezier(0.76, 0, 0.24, 1);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #070e1a;
+  transition: transform 0.85s cubic-bezier(0.76, 0, 0.24, 1),
+              opacity 0.85s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform, opacity;
+}
+
+.industry-splash.industry-splash-exit {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+/* Background image with cinematic slow drift */
+.industry-splash-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.08);
+  animation: industryBgDrift 8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  filter: brightness(0.62) saturate(1.15);
   will-change: transform;
 }
 
-.curtain-content {
+@keyframes industryBgDrift {
+  0% { transform: scale(1.08); }
+  100% { transform: scale(1.0); }
+}
+
+.industry-splash-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(7, 14, 26, 0.76) 0%, rgba(5, 10, 20, 0.94) 85%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.industry-splash-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1080px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+/* Top Node Tag */
+.industry-splash-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: splashFadeDown 0.8s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.industry-node-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(254, 185, 0, 0.3);
+  padding: 6px 18px;
+  border-radius: 99px;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+/* Main Brand & Sector Pillars */
+.industry-splash-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 24px;
-  animation: curtainFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  width: 100%;
+  margin: auto 0;
 }
 
-@keyframes curtainFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.curtain-logo-wrap {
+.industry-logo-wrapper {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  padding: 6px 12px;
+  padding: 8px 16px;
+  animation: splashFadeUp 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.curtain-logo {
-  height: 52px;
+.industry-logo-img {
+  height: 56px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.6));
 }
 
-/* Subtle Golden Light Sheen across the authentic brand mark */
-.curtain-shimmer {
+.industry-logo-shimmer {
   position: absolute;
   top: 0;
   left: -120%;
@@ -1277,70 +1331,201 @@ body.curtain-locked {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(254, 185, 0, 0.35) 50%,
+    rgba(254, 185, 0, 0.4) 50%,
     transparent 100%
   );
   transform: skewX(-25deg);
-  animation: curtainShimmerSweep 1.3s 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: logoShimmerSweep 1.3s 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   pointer-events: none;
 }
 
-@keyframes curtainShimmerSweep {
+@keyframes logoShimmerSweep {
   0% { left: -120%; }
   100% { left: 220%; }
 }
 
-/* Fine Hairline Divider */
-.curtain-divider {
-  width: 0px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(254, 185, 0, 0.85), transparent);
-  margin: 18px 0 14px 0;
-  animation: curtainDividerExpand 0.9s 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes curtainDividerExpand {
-  0% { width: 0px; opacity: 0; }
-  100% { width: 72px; opacity: 0.9; }
-}
-
-/* Elegant Editorial Tagline */
-.curtain-tagline {
+.industry-tagline {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.74rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
-  margin: 0;
+  color: #feb900;
+  margin: 14px 0 32px 0;
   padding-left: 0.28em;
-  animation: curtainTextFade 0.9s 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+  animation: splashFadeUp 0.8s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-@keyframes curtainTextFade {
-  0% { opacity: 0; transform: translateY(4px); }
-  100% { opacity: 0.75; transform: translateY(0); }
+/* 3 Core Operational Pillars */
+.industry-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 960px;
+  animation: splashFadeUp 0.8s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Curtain Unveil Animation */
-.curtain-loader.curtain-lift .curtain-panel {
-  transform: translateY(-100%);
+.industry-pillar-card {
+  background: rgba(11, 25, 44, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.industry-pillar-card:hover {
+  border-color: rgba(254, 185, 0, 0.45);
+  background: rgba(19, 39, 66, 0.7);
+  transform: translateY(-2px);
+}
+
+.pillar-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(254, 185, 0, 0.12);
+  border: 1px solid rgba(254, 185, 0, 0.3);
+  color: #feb900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.pillar-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pillar-name {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+}
+
+.pillar-sub {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Bottom Progress & Enter */
+.industry-splash-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+  animation: splashFadeUp 0.8s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.industry-progress-line {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.industry-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #c88910, #feb900, #ffffff);
+  border-radius: 99px;
+  box-shadow: 0 0 10px rgba(254, 185, 0, 0.8);
+  transition: width 0.05s linear;
+}
+
+.industry-enter-prompt {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.industry-splash:hover .industry-enter-prompt {
+  color: #feb900;
+}
+
+/* Keyframes */
+@keyframes splashFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes splashFadeDown {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .industry-pillars-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 480px;
+  }
+  .industry-pillar-card {
+    padding: 12px 16px;
+  }
 }
 
 @media (max-width: 576px) {
-  .curtain-logo {
-    height: 40px;
+  .industry-splash-container {
+    padding: 24px 16px;
   }
-  .curtain-tagline {
+  .industry-node-pill {
     font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    padding-left: 0.2em;
+    letter-spacing: 0.08em;
+    padding: 5px 12px;
   }
-  .curtain-divider {
-    margin: 14px 0 12px 0;
+  .industry-logo-img {
+    height: 42px;
+  }
+  .industry-tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    margin: 10px 0 20px 0;
+  }
+  .pillar-icon-box {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .pillar-name {
+    font-size: 0.74rem;
+  }
+  .pillar-sub {
+    font-size: 0.66rem;
+  }
+  .industry-enter-prompt {
+    font-size: 0.68rem;
   }
 }
+
 
 
 
