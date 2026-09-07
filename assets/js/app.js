@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Contact Form
   setupRfqForm();
+
+  // 9. Ultra-Pro Splash Screen
+  setupSplashScreen();
 });
 
 /**
@@ -298,5 +301,110 @@ function setupVegoilsSlider() {
     });
   });
 }
+
+/**
+ * Ultra-Pro Corporate Splash Screen & Trade Desk Initializer
+ */
+function setupSplashScreen() {
+  const splash = document.getElementById('splashScreen');
+  if (!splash) return;
+
+  const progressBar = document.getElementById('splashProgressBar');
+  const counterVal = document.getElementById('splashCounterVal');
+  const statusText = document.getElementById('splashStatusText');
+  const skipBtn = document.getElementById('splashSkipBtn');
+
+  let isDismissed = false;
+  let progress = 0;
+
+  // Helper to fetch translated status message
+  function getStatusMsg(stepKey) {
+    if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][stepKey]) {
+      return translations[currentLang][stepKey];
+    }
+    return (translations && translations['en'] && translations['en'][stepKey]) || '';
+  }
+
+  function dismissSplash() {
+    if (isDismissed) return;
+    isDismissed = true;
+
+    if (progressTimer) {
+      clearInterval(progressTimer);
+    }
+
+    if (progressBar) progressBar.style.width = '100%';
+    if (counterVal) counterVal.textContent = '100';
+
+    splash.classList.add('splash-dismissing');
+    document.body.classList.remove('splash-active');
+
+    setTimeout(() => {
+      splash.style.display = 'none';
+      if (window.AOS) window.AOS.refresh();
+    }, 750);
+  }
+
+  // Set initial status text
+  if (statusText) {
+    statusText.textContent = getStatusMsg('splash_status_1');
+  }
+
+  // Multi-stage progress simulation (smooth & executive: ~2.3 seconds total)
+  const duration = 2300;
+  const interval = 25;
+  const totalTicks = duration / interval;
+  let tick = 0;
+
+  const progressTimer = setInterval(() => {
+    tick++;
+    // Non-linear easing: ease-out cubic for realistic network connection sensation
+    const t = tick / totalTicks;
+    progress = Math.min(100, Math.round((1 - Math.pow(1 - t, 2.8)) * 100));
+
+    if (progressBar) {
+      progressBar.style.width = progress + '%';
+    }
+    if (counterVal) {
+      counterVal.textContent = progress < 10 ? '0' + progress : progress;
+    }
+
+    // Dynamic Multi-stage telemetry status updates
+    if (statusText) {
+      if (progress < 26) {
+        statusText.textContent = getStatusMsg('splash_status_1');
+      } else if (progress < 60) {
+        statusText.textContent = getStatusMsg('splash_status_2');
+      } else if (progress < 88) {
+        statusText.textContent = getStatusMsg('splash_status_3');
+      } else {
+        statusText.textContent = getStatusMsg('splash_status_4');
+      }
+    }
+
+    if (progress >= 100) {
+      clearInterval(progressTimer);
+      setTimeout(dismissSplash, 220);
+    }
+  }, interval);
+
+  // Instant skip / click-through handlers
+  splash.addEventListener('click', dismissSplash);
+
+  if (skipBtn) {
+    skipBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dismissSplash();
+    });
+  }
+
+  // Keyboard shortcut (Escape, Space, Enter) to bypass
+  window.addEventListener('keydown', (e) => {
+    if (!isDismissed && (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter')) {
+      dismissSplash();
+    }
+  });
+}
+
 
 

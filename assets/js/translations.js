@@ -19,9 +19,14 @@ const translations = {
 
     // Splash Screen
     splash_title: "NARAGRO",
-    splash_subtitle: "COMMODITIES & MARITIME BROKERAGE",
-    splash_loading: "Connecting to Mediterranean Trade Desk...",
-    splash_skip: "Click anywhere to enter",
+    splash_subtitle: "PHYSICAL AGRI-COMMODITIES & MARITIME BROKERAGE",
+    splash_status_1: "INITIALIZING GLOBAL MARITIME NETWORK...",
+    splash_status_2: "CALIBRATING FOSFA & GAFTA SPECIFICATIONS...",
+    splash_status_3: "ACCESSING PHYSICAL BULK & SHORE TANK TERMINAL...",
+    splash_status_4: "SECURE CONNECTION ESTABLISHED • MERSIN DESK READY",
+    splash_node: "MEDITERRANEAN LOGISTICS GATEWAY • MERSIN (MIP)",
+    splash_skip_btn: "Skip Intro",
+    splash_skip: "Click anywhere to enter portal",
 
     // Hero Section
     hero_badge: "PHYSICAL AGRI-COMMODITIES & CHARTERING",
@@ -176,9 +181,14 @@ const translations = {
 
     // Splash Screen
     splash_title: "NARAGRO",
-    splash_subtitle: "EMTİA & DENİZCİLİK BROKERLIĞI",
-    splash_loading: "Akdeniz Ticaret Masasına Bağlanılıyor...",
-    splash_skip: "Giriş için tıklayın",
+    splash_subtitle: "FİZİKİ TARIMSAL EMTİA & DENİZCİLİK BROKERLIĞI",
+    splash_status_1: "KÜRESEL DENİZCİLİK AĞI BAŞLATILIYOR...",
+    splash_status_2: "FOSFA & GAFTA STANDARTLARI DOĞRULANIYOR...",
+    splash_status_3: "DÖKME EMTİA & SAHİL TANKI TERMİNALİ BAĞLANTISI...",
+    splash_status_4: "GÜVENLİ ERİŞİM SAĞLANDI • MERSİN MERKEZ MASASI AKTİF",
+    splash_node: "AKDENİZ LOJİSTİK KAPISI • MERSİN LİMANI (MIP)",
+    splash_skip_btn: "Giriş Yap",
+    splash_skip: "Giriş için herhangi bir yere tıklayın",
 
     // Hero Bölümü
     hero_badge: "FİZİKİ TARIMSAL EMTİA & GEMİ KİRALAMA",
